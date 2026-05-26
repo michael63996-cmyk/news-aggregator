@@ -19,7 +19,7 @@ AUTO_NEWS_RSS = [
 DOUBAN_BOOK_RSS = "https://www.douban.com/feed/recommend/book"
 
 # 飞书 Webhook（建议放在 GitHub Secrets，此处仅作本地测试）
-FEISHU_WEBHOOK = "https://open.feishu.cn/open-apis/bot/v2/hook/xxxxxx"
+FEISHU_WEBHOOK = "https://open.feishu.cn/open-apis/bot/v2/hook/6d3ebc36-09fb-4b09-a2fa-c17b556f9ce1"
 
 # 推送时间（UTC，+8小时即北京时间）
 CRON_SCHEDULE = "23 23 * * *"  # 北京时间每天 07:30
