@@ -4,11 +4,12 @@ on:
   schedule:
     # 每天北京时间 07:30 (23:30 UTC)
     - cron: "30 23 * * *"
-  workflow_dispatch:  # 支持手动触发
+  workflow_dispatch:
 
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    permissions: contents: write
 
     steps:
       - name: Checkout
@@ -25,20 +26,20 @@ jobs:
         run: pip install requests beautifulsoup4 feedparser
 
       - name: Run fetcher
-        env:
-          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
         run: |
           cd scripts
-          python fetch_all.py
+          python fetch_all.py          
 
       - name: Update data files
         run: |
           git config user.name "GitHub Actions"
           git config user.email "github-actions@github.com"
           git add data/*.json
-          git diff --cached --quiet || git commit -m "📦 更新数据 $(date +%Y-%m-%d)"
+          git diff --cached --quiet || git commit -m "📦 更新数据 $(date +%Y-%m-%d)"          
 
       - name: Push changes
         uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
