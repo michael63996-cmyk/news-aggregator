@@ -73,3 +73,4 @@ if __name__ == "__main__":
         # 从 stdin 读取
         text = sys.stdin.read()
         send_text(text)
+
