@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #0f0f1a;
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding: 30px 0 20px;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 8px 20px;
+  border: 1px solid #333;
+  background: #1a1a2e;
+  color: #aaa;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  border-color: #555;
+  color: #fff;
+}
+
+.tab.active {
+  background: #2a5ada;
+  border-color: #2a5ada;
+  color: #fff;
+}
+
+.card {
+  background: #1a1a2e;
+  border: 1px solid #2a2a3e;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.card-section {
+  margin-bottom: 24px;
+}
+
+.card-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2a2a3e;
+}
+
+.stock-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #222;
+}
+
+.stock-item:last-child {
+  border-bottom: none;
+}
+
+.stock-name {
+  font-weight: 500;
+}
+
+.stock-code {
+  color: #666;
+  font-size: 12px;
+}
+
+.stock-price {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "SF Mono", monospace;
+}
+
+.up { color: #ef4444; }
+.down { color: #22c55e; }
+
+.news-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #222;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-item a {
+  color: #7aa8f5;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1.5;
+  display: block;
+}
+
+.news-item a:hover {
+  text-decoration: underline;
+}
+
+.news-source {
+  font-size: 12px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.loading {
+  text-align: center;
+  color: #666;
+  padding: 40px;
+}
+
+.error {
+  color: #ef4444;
+  text-align: center;
+  padding: 40px;
+}
+
+footer {
+  text-align: center;
+  color: #444;
+  font-size: 12px;
+  margin-top: 30px;
+  padding: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body { padding: 12px; }
+  header h1 { font-size: 22px; }
+  .stock-item { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .stock-price { font-size: 16px; }
+}

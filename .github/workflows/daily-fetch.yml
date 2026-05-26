@@ -1,0 +1,44 @@
+name: Daily News Fetch
+
+on:
+  schedule:
+    # 每天北京时间 07:30 (23:30 UTC)
+    - cron: "30 23 * * *"
+  workflow_dispatch:  # 支持手动触发
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 feedparser
+
+      - name: Run fetcher
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+        run: |
+          cd scripts
+          python fetch_all.py
+
+      - name: Update data files
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "github-actions@github.com"
+          git add data/*.json
+          git diff --cached --quiet || git commit -m "📦 更新数据 $(date +%Y-%m-%d)"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
