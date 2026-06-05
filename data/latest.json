@@ -1,22 +1,22 @@
 {
-  "updated": "2026-06-04T11:27:09.294932",
+  "updated": "2026-06-05T11:44:53.480108",
   "stocks": [
     {
       "code": "601138",
       "name": "601138",
-      "error": "'NoneType' object has no attribute 'get'",
+      "error": "Expecting value: line 1 column 1 (char 0)",
       "market": "A股"
     },
     {
       "code": "601727",
       "name": "601727",
-      "error": "'NoneType' object has no attribute 'get'",
+      "error": "Expecting value: line 1 column 1 (char 0)",
       "market": "A股"
     },
     {
       "code": "603228",
       "name": "603228",
-      "error": "'NoneType' object has no attribute 'get'",
+      "error": "Expecting value: line 1 column 1 (char 0)",
       "market": "A股"
     }
   ],
