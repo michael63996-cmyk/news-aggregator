@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T00:15:22.089033",
+  "updated": "2026-07-17T00:58:05.531174",
   "stocks": [
     {
       "code": "601138",
@@ -10,7 +10,7 @@
     {
       "code": "601727",
       "name": "601727",
-      "error": "'NoneType' object has no attribute 'get'",
+      "error": "HTTPSConnectionPool(host='push2.eastmoney.com', port=443): Read timed out. (read timeout=10)",
       "market": "A股"
     },
     {
