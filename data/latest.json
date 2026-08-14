@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13T00:03:59.107669",
+  "updated": "2026-08-14T00:03:58.853199",
   "stocks": [
     {
       "code": "601138",
@@ -10,13 +10,13 @@
     {
       "code": "601727",
       "name": "601727",
-      "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+      "error": "'NoneType' object has no attribute 'get'",
       "market": "A股"
     },
     {
       "code": "603228",
       "name": "603228",
-      "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+      "error": "'NoneType' object has no attribute 'get'",
       "market": "A股"
     }
   ],
