@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08T01:15:34.712784",
+  "updated": "2026-09-09T01:19:19.417329",
   "stocks": [
     {
       "code": "601138",
@@ -16,13 +16,17 @@
     {
       "code": "603228",
       "name": "603228",
-      "error": "'NoneType' object has no attribute 'get'",
+      "error": "Expecting value: line 1 column 1 (char 0)",
       "market": "A股"
     }
   ],
   "news": {
     "36氪汽车": [],
-    "虎嗅汽车": [],
+    "虎嗅汽车": [
+      {
+        "error": "HTTPSConnectionPool(host='www.huxiu.com', port=443): Read timed out."
+      }
+    ],
     "Automotive News": []
   },
   "books": []
