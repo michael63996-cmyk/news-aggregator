@@ -1,16 +1,16 @@
 {
-  "updated": "2026-10-09T03:00:33.607581",
+  "updated": "2026-10-10T02:28:34.279157",
   "stocks": [
     {
       "code": "601138",
       "name": "601138",
-      "error": "HTTPSConnectionPool(host='push2delay.eastmoney.com', port=443): Read timed out. (read timeout=10)",
+      "error": "'NoneType' object has no attribute 'get'",
       "market": "A股"
     },
     {
       "code": "601727",
       "name": "601727",
-      "error": "HTTPSConnectionPool(host='push2delay.eastmoney.com', port=443): Read timed out. (read timeout=10)",
+      "error": "'NoneType' object has no attribute 'get'",
       "market": "A股"
     },
     {
@@ -22,7 +22,11 @@
   ],
   "news": {
     "36氪汽车": [],
-    "虎嗅汽车": [],
+    "虎嗅汽车": [
+      {
+        "error": "HTTPSConnectionPool(host='www.huxiu.com', port=443): Read timed out."
+      }
+    ],
     "Automotive News": []
   },
   "books": []
