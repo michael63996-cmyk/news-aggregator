@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T02:53:22.200284",
+  "updated": "2026-11-16T03:10:51.494054",
   "stocks": [
     {
       "code": "601138",
@@ -22,7 +22,11 @@
   ],
   "news": {
     "36氪汽车": [],
-    "虎嗅汽车": [],
+    "虎嗅汽车": [
+      {
+        "error": "HTTPSConnectionPool(host='www.huxiu.com', port=443): Read timed out."
+      }
+    ],
     "Automotive News": []
   },
   "books": []
